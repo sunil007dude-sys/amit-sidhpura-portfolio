@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit N. Sidhpura &mdash; Senior Business Leader &middot; Gems &amp; Jewellery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#071c20;color:#fff;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;font-weight:300;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4rem;background:rgba(7,28,32,0.97);border-bottom:1px solid rgba(181,148,74,0.15)}
+.nav-logo{font-family:'Cinzel',Georgia,serif;font-size:0.85rem;letter-spacing:0.25em;color:#b5944a;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:#6a9298;text-decoration:none;transition:color 0.3s}
+.nav-links a:hover{color:#d4aa6a}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:0 4rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 45%,rgba(14,102,116,0.2) 0%,transparent 65%),linear-gradient(135deg,#071c20 0%,#091e24 60%,#0d3040 100%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(181,148,74,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(181,148,74,0.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-gem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:550px;height:550px;opacity:0.06}
+.hero-content{position:relative;z-index:2;max-width:680px;padding-top:80px}
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:#b5944a;text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:1rem}
+.hero-eyebrow::before{content:'';width:36px;height:1px;background:#b5944a;flex-shrink:0}
+.hero-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:1.0;color:#fff}
+.hero-name span{color:#d4aa6a;font-style:italic}
+.hero-title{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.22em;color:#1a8a9a;text-transform:uppercase;margin-top:1.2rem}
+.hero-divider{width:70px;height:1px;background:linear-gradient(90deg,#b5944a,transparent);margin:1.8rem 0}
+.hero-summary{font-size:1rem;line-height:1.75;color:#9ec8d0;max-width:500px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.65rem;margin-top:2rem}
+.badge{display:inline-flex;align-items:center;gap:0.4rem;padding:0.38rem 1rem;border:1px solid rgba(181,148,74,0.3);color:#d4aa6a;font-size:0.72rem;letter-spacing:0.08em;font-weight:500;text-transform:uppercase;border-radius:2px;background:rgba(181,148,74,0.05)}
+.badge .dot{width:5px;height:5px;background:#b5944a;border-radius:50%;flex-shrink:0}
+.hero-cta{display:flex;gap:1rem;margin-top:2.4rem}
+.btn-gold{padding:0.8rem 2rem;background:#b5944a;color:#071c20;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all 0.3s}
+.btn-gold:hover{background:#d4aa6a;transform:translateY(-2px)}
+.btn-ghost{padding:0.8rem 2rem;background:transparent;color:#fff;font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.2);display:inline-block;transition:all 0.3s}
+.btn-ghost:hover{border-color:#b5944a;color:#d4aa6a}
+.hero-stats{position:absolute;right:4rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0.5rem;z-index:2}
+.stat-card{background:rgba(13,46,53,0.75);border:1px solid rgba(181,148,74,0.15);border-left:3px solid #b5944a;padding:1rem 1.4rem;min-width:190px;backdrop-filter:blur(10px)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#d4aa6a;line-height:1}
+.stat-label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#6a9298;margin-top:0.25rem}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.4rem}
+.scroll-hint span{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#6a9298}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,#b5944a,transparent);animation:pulse 2s ease-in-out infinite}
+section{padding:5.5rem 4rem}
+.sec-inner{max-width:1100px;margin:0 auto}
+.sec-label{font-family:'Cinzel',serif;font-size:0.66rem;letter-spacing:0.35em;text-transform:uppercase;color:#b5944a;display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem}
+.sec-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(181,148,74,0.3),transparent);max-width:70px}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.2vw,3rem);font-weight:300;line-height:1.15;color:#fff;margin-bottom:0.5rem}
+.sec-title em{color:#d4aa6a;font-style:italic}
+.sec-sub{font-size:0.92rem;color:#6a9298;line-height:1.7;max-width:500px;margin-bottom:3rem}
+#about{background:#0d2e35}
+.about-grid{display:grid;grid-template-columns:auto 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto}
+.photo-wrap{position:relative;flex-shrink:0}
+.photo-wrap::before{content:'';position:absolute;inset:-14px;border:1px solid rgba(181,148,74,0.18);pointer-events:none;z-index:1}
+.photo-wrap::after{content:'';position:absolute;bottom:-22px;right:-22px;width:55%;height:55%;background:rgba(181,148,74,0.04);border:1px solid rgba(181,148,74,0.1);z-index:0}
+.photo-wrap img{width:320px;height:400px;object-fit:cover;object-position:center top;display:block;position:relative;z-index:0}
+.yrs-badge{position:absolute;bottom:-14px;right:-14px;width:86px;height:86px;background:#b5944a;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2}
+.yrs-badge .n{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:#071c20;line-height:1}
+.yrs-badge .l{font-size:0.58rem;font-weight:600;letter-spacing:0.08em;color:#071c20;text-transform:uppercase}
+.profile-para{font-size:1rem;line-height:1.85;color:#9ec8d0;margin-bottom:1.4rem}
+.profile-para strong{color:#fff;font-weight:500}
+.contact-row{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid rgba(181,148,74,0.12)}
+.ci{display:flex;align-items:center;gap:0.55rem;font-size:0.83rem;color:#6a9298}
+.ci a{color:#6a9298;text-decoration:none}
+.ci a:hover{color:#d4aa6a}
+#competencies{background:#071c20}
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(181,148,74,0.1);border:1px solid rgba(181,148,74,0.1)}
+.cc{background:#071c20;padding:2rem 1.8rem;position:relative;transition:all 0.3s;overflow:hidden}
+.cc::before{content:'';position:absolute;left:0;top:0;width:3px;height:0;background:#b5944a;transition:height 0.4s}
+.cc:hover::before{height:100%}
+.cc:hover{background:#0a2830}
+.cc-icon{font-size:1.5rem;margin-bottom:0.9rem;display:block}
+.cc-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:0.5rem}
+.cc-desc{font-size:0.82rem;line-height:1.6;color:#6a9298}
+#experience{background:#0d2e35}
+.exp-wrap{max-width:880px;margin:0 auto}
+.exp-item{display:grid;grid-template-columns:170px 1fr;gap:0 2.5rem;margin-bottom:3.2rem;position:relative}
+.exp-item:not(:last-child)::after{content:'';position:absolute;left:187px;top:8px;bottom:-3.2rem;width:1px;background:linear-gradient(to bottom,rgba(181,148,74,0.4),rgba(181,148,74,0.04))}
+.exp-date{text-align:right;padding-right:1.8rem;position:relative}
+.exp-date::after{content:'';position:absolute;right:-6px;top:7px;width:12px;height:12px;background:#0d2e35;border:2px solid #b5944a;border-radius:50%}
+.exp-yr{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:#d4aa6a;font-weight:600}
+.exp-pd{font-size:0.68rem;color:#6a9298;margin-top:0.2rem}
+.exp-role{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:#fff;line-height:1.2;margin-bottom:0.2rem}
+.exp-org{font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:#1a8a9a;margin-bottom:1rem}
+.exp-pts{list-style:none}
+.exp-pts li{font-size:0.87rem;line-height:1.7;color:#8ab8c0;padding-left:1rem;position:relative;margin-bottom:0.35rem}
+.exp-pts li::before{content:"◆";position:absolute;left:0;font-size:0.38rem;color:#b5944a;top:0.5rem}
+#achievements{background:#094d59;position:relative;overflow:hidden}
+#achievements::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(181,148,74,0.05),transparent 50%)}
+.ach-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(181,148,74,0.15);max-width:1100px;margin:0 auto 3.5rem}
+.ach-n{background:rgba(9,77,89,0.9);padding:2.2rem 1.5rem;text-align:center}
+.ach-big{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:#d4aa6a;line-height:1}
+.ach-sm{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#b5944a}
+.ach-lbl{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9ec8d0;margin-top:0.5rem;line-height:1.4}
+.ach-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.ach-item{display:flex;gap:0.9rem;align-items:flex-start}
+.ach-dia{width:7px;height:7px;background:#b5944a;transform:rotate(45deg);flex-shrink:0;margin-top:0.42rem}
+.ach-txt{font-size:0.87rem;line-height:1.6;color:#c8e4e8}
+#education{background:#071c20}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;max-width:880px;margin:0 auto}
+.edu-card{background:#0d2e35;border:1px solid rgba(181,148,74,0.12);padding:1.8rem;position:relative;transition:all 0.3s}
+.edu-card.top{grid-column:1/-1;background:linear-gradient(135deg,#094d59,#0d2e35);border-color:rgba(181,148,74,0.3)}
+.edu-card:hover{transform:translateY(-3px);border-color:rgba(181,148,74,0.38)}
+.edu-tag{position:absolute;top:1.1rem;right:1.1rem;background:rgba(181,148,74,0.14);border:1px solid rgba(181,148,74,0.28);padding:0.18rem 0.55rem;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#b5944a}
+.edu-yr{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.3em;color:#b5944a;margin-bottom:0.6rem}
+.edu-deg{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:0.28rem;line-height:1.3}
+.edu-inst{font-size:0.78rem;color:#1a8a9a;letter-spacing:0.04em}
+#languages{background:#0d2e35;padding:4rem}
+.lang-row{display:flex;gap:1.2rem;flex-wrap:wrap;max-width:780px;margin:0 auto}
+.lc{flex:1;min-width:155px;background:#071c20;border:1px solid rgba(181,148,74,0.12);padding:1.6rem 1.3rem;text-align:center;transition:all 0.3s}
+.lc:hover{border-color:rgba(181,148,74,0.38);transform:translateY(-3px)}
+.lc-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:0.3rem}
+.lc-lv{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:#b5944a}
+.ldots{display:flex;gap:4px;justify-content:center;margin-top:0.7rem}
+.ld{width:6px;height:6px;background:#b5944a;border-radius:50%}
+#contact{background:#071c20;text-align:center;padding:5.5rem 4rem 4rem;border-top:1px solid rgba(181,148,74,0.1)}
+.ct-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.3rem,3.8vw,3.8rem);font-weight:300;color:#fff;margin-bottom:0.5rem}
+.ct-title em{color:#d4aa6a;font-style:italic}
+.ct-sub{font-size:0.92rem;color:#6a9298;margin-bottom:2.8rem}
+.ct-items{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:2.8rem}
+.ct-d{display:flex;flex-direction:column;align-items:center;gap:0.35rem}
+.ct-lbl{font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#b5944a;font-family:'Cinzel',serif}
+.ct-val{font-size:0.95rem;color:#fff}
+.ct-val a{color:#fff;text-decoration:none}
+.ct-val a:hover{color:#d4aa6a}
+footer{text-align:center;padding:1.8rem 4rem;border-top:1px solid rgba(181,148,74,0.07);font-size:0.68rem;color:#3a5a60;letter-spacing:0.07em}
+footer span{color:#b5944a;opacity:0.45}
+@keyframes pulse{0%,100%{opacity:0.3}50%{opacity:1}}
+@media(max-width:1000px){
+  nav{padding:1rem 2rem}.nav-links{display:none}
+  section{padding:4rem 1.8rem}
+  .hero{padding:5rem 1.8rem 3rem;min-height:auto}
+  .hero-stats{display:none}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .photo-wrap img{width:100%;max-width:320px;height:380px}
+  .comp-grid{grid-template-columns:1fr 1fr}
+  .exp-item{grid-template-columns:1fr}.exp-date{text-align:left;padding-right:0}
+  .exp-date::after{display:none}.exp-item:not(:last-child)::after{display:none}
+  .ach-nums{grid-template-columns:repeat(2,1fr)}.ach-list{grid-template-columns:1fr}
+  .edu-grid{grid-template-columns:1fr}.edu-card.top{grid-column:1}
+  #contact{padding:4rem 1.8rem}#languages{padding:3rem 1.8rem}
+}
+@media(max-width:540px){.comp-grid{grid-template-columns:1fr}.lang-row{gap:0.7rem}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-logo">Amit N. Sidhpura</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#competencies">Expertise</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <svg class="hero-gem" viewBox="0 0 200 200" fill="none">
+    <polygon points="100,10 180,70 160,170 40,170 20,70" stroke="#b5944a" stroke-width="1" fill="none"/>
+    <polygon points="100,10 180,70 100,90" stroke="#b5944a" stroke-width="0.5" fill="none" opacity="0.5"/>
+    <polygon points="100,10 20,70 100,90" stroke="#b5944a" stroke-width="0.5" fill="none" opacity="0.5"/>
+    <polygon points="180,70 160,170 100,90" stroke="#b5944a" stroke-width="0.5" fill="none" opacity="0.5"/>
+    <polygon points="20,70 40,170 100,90" stroke="#b5944a" stroke-width="0.5" fill="none" opacity="0.5"/>
+    <polygon points="160,170 40,170 100,90" stroke="#b5944a" stroke-width="0.5" fill="none" opacity="0.5"/>
+  </svg>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Gems &amp; Jewellery Industry Leader</p>
+    <h1 class="hero-name">Amit N.<br><span>Sidhpura</span></h1>
+    <p class="hero-title">Senior Manager &mdash; Sales, Operations &amp; Training Development</p>
+    <div class="hero-divider"></div>
+    <p class="hero-summary">19 years of progressive leadership driving revenue growth, operational excellence, and market expansion across India &amp; the Middle East at the International Gemological Institute.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span>Pan-India &amp; Middle East</span>
+      <span class="badge"><span class="dot"></span>IGI &mdash; 19 Years</span>
+      <span class="badge"><span class="dot"></span>Gem-A London Diploma</span>
+      <span class="badge"><span class="dot"></span>IIM Calcutta MDP</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-gold">Get in Touch</a>
+      <a href="#experience" class="btn-ghost">View Experience</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card"><div class="stat-num">19<span style="font-size:1.3rem;color:#b5944a;font-weight:300">+</span></div><div class="stat-label">Years at IGI</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:1.7rem">Pan-India</div><div class="stat-label">&amp; Middle East</div></div>
+    <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Languages Spoken</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:1.4rem">Gem-A</div><div class="stat-label">London Diploma, 2017</div></div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="photo-wrap">
+      <img src="data:image/jpeg;base64,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" alt="Amit N. Sidhpura" />
+      <div class="yrs-badge"><div class="n">19</div><div class="l">Years</div></div>
+    </div>
+    <div>
+      <div class="sec-label">Profile</div>
+      <h2 class="sec-title">A Career Built on<br><em>Gems &amp; Leadership</em></h2>
+      <p class="profile-para">Amit N. Sidhpura is a <strong>Senior Sales &amp; Operations Leader</strong> with 19 years of uninterrupted growth within the International Gemological Institute &mdash; one of the world&apos;s most respected names in gem certification and education.</p>
+      <p class="profile-para">Starting as a <strong>Loose Diamond Grader</strong> and rising through every rung &mdash; Team Leader, Assistant Manager, Manager of Training &amp; Development, and now <strong>Senior Manager for Pan-India and the Middle East</strong> &mdash; his journey is a rare testament to industry depth and sustained leadership excellence.</p>
+      <p class="profile-para">He combines <strong>deep gemological expertise</strong> (Graduate Gemologist &ndash; IGI; Diploma in Diamond Grading &ndash; Gem-A London) with sharpened commercial acumen (Senior Management Program &ndash; IIM Calcutta) to deliver measurable outcomes across multi-region P&amp;L, institutional partnerships, and team capability development.</p>
+      <div class="contact-row">
+        <div class="ci">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b5944a" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:contact@amitsidhpura.com">contact@amitsidhpura.com</a>
+        </div>
+        <div class="ci">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b5944a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mumbai, Maharashtra, India
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competencies">
+  <div class="sec-inner">
+    <div style="max-width:540px;margin-bottom:3rem">
+      <div class="sec-label">Core Expertise</div>
+      <h2 class="sec-title">What He <em>Excels At</em></h2>
+      <p class="sec-sub">Nine domains of leadership capability honed over nearly two decades at the forefront of the gems &amp; jewellery certification ecosystem.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="cc"><span class="cc-icon">&#128200;</span><div class="cc-title">National Sales Strategy &amp; GTM</div><p class="cc-desc">Designing and executing go-to-market strategy across B2B and B2C channels, driving revenue growth and market penetration at national scale.</p></div>
+      <div class="cc"><span class="cc-icon">&#9881;&#65039;</span><div class="cc-title">P&amp;L Ownership &amp; Financial Planning</div><p class="cc-desc">End-to-end P&amp;L responsibility including forecasting, budgeting, and performance optimisation across multi-region operations.</p></div>
+      <div class="cc"><span class="cc-icon">&#127959;</span><div class="cc-title">Operations Excellence &amp; SOPs</div><p class="cc-desc">Standardising operating procedures to improve turnaround time, quality consistency, and service excellence at scale.</p></div>
+      <div class="cc"><span class="cc-icon">&#129309;</span><div class="cc-title">Institutional &amp; Government Alliances</div><p class="cc-desc">Building strategic partnerships with major retail chains, manufacturers, and government bodies for large-scale adoption.</p></div>
+      <div class="cc"><span class="cc-icon">&#127758;</span><div class="cc-title">Market Expansion &mdash; India &amp; Middle East</div><p class="cc-desc">Driving geographic expansion through scalable partnership frameworks and regional execution models across diverse markets.</p></div>
+      <div class="cc"><span class="cc-icon">&#127891;</span><div class="cc-title">Training &amp; Capability Development</div><p class="cc-desc">Designing learning frameworks, competency maps, and content systems that elevate team capability across all functions.</p></div>
+      <div class="cc"><span class="cc-icon">&#128101;</span><div class="cc-title">Team Leadership &amp; People Development</div><p class="cc-desc">Building high-performance cross-functional teams across Sales, Operations, Training, and Customer Engagement.</p></div>
+      <div class="cc"><span class="cc-icon">&#128202;</span><div class="cc-title">CRM, Forecasting &amp; Pipeline Governance</div><p class="cc-desc">Leveraging CRM insights to improve pipeline visibility, forecasting accuracy, and strategic decision-making alignment.</p></div>
+      <div class="cc"><span class="cc-icon">&#128142;</span><div class="cc-title">Deep Gemological Expertise</div><p class="cc-desc">Graduate Gemologist (IGI) + Gem-A London Diploma &mdash; two decades of diamond grading, lab operations, and gemological education.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="sec-inner">
+    <div style="margin-bottom:3rem">
+      <div class="sec-label">Career Journey</div>
+      <h2 class="sec-title">19 Years at <em>One Institution</em></h2>
+      <p class="sec-sub">A singular career arc &mdash; rising from diamond grader to Pan-India &amp; Middle East senior leader at the International Gemological Institute.</p>
+    </div>
+    <div class="exp-wrap">
+      <div class="exp-item">
+        <div class="exp-date"><div class="exp-yr">Present</div><div class="exp-pd">2005 &ndash; Now</div></div>
+        <div><div class="exp-role">Senior Manager &mdash; Sales, Operations &amp; Training Development</div><div class="exp-org">International Gemological Institute &nbsp;&middot;&nbsp; Pan-India &amp; Middle East</div><ul class="exp-pts"><li>Spearheads national sales strategy, operations performance, and complete P&amp;L ownership across geographies.</li><li>Leads multi-region cross-functional teams across Sales, Operations, Training, and Customer Support to achieve revenue targets.</li><li>Strengthens key institutional and government relationships to drive large-scale business adoption and certification uptake.</li><li>Standardises SOPs across regions to improve TAT, quality assurance, and process efficiency to global IGI standards.</li><li>Drives market expansion through scalable B2B/B2C frameworks and regional execution strategies.</li><li>Leverages CRM insights for revenue forecasting, governance, and strategic alignment with senior leadership.</li></ul></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date"><div class="exp-yr">Manager</div><div class="exp-pd">Training &amp; Dev</div></div>
+        <div><div class="exp-role">Manager &mdash; Training &amp; Capability Development</div><div class="exp-org">International Gemological Institute &nbsp;&middot;&nbsp; India &amp; Middle East</div><ul class="exp-pts"><li>Designed and implemented comprehensive learning frameworks for sales teams, gemologists, and corporate partners.</li><li>Led onboarding, competency mapping, and continuous development programs across multi-region operations.</li><li>Delivered technical and business training to major retail chains and manufacturing units.</li><li>Developed standardised training content, assessments, and feedback systems improving output quality.</li><li>Recruited and developed high-potential talent across Education and Grading departments.</li></ul></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date"><div class="exp-yr">AM</div><div class="exp-pd">Education</div></div>
+        <div><div class="exp-role">Assistant Manager &mdash; Education &amp; Institutional Engagement</div><div class="exp-org">International Gemological Institute &nbsp;&middot;&nbsp; Maharashtra &amp; Gujarat</div><ul class="exp-pts"><li>Led regional education operations and built strategic relationships with key jewellery retailers and manufacturers.</li><li>Conducted gemological training, product sessions, and industry awareness programmes across the region.</li><li>Executed sales training for retail chain partners strengthening product knowledge and sales conversion.</li></ul></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date"><div class="exp-yr">TL</div><div class="exp-pd">Lab Operations</div></div>
+        <div><div class="exp-role">Team Leader &amp; Senior Diamond Grader</div><div class="exp-org">International Gemological Institute &nbsp;&middot;&nbsp; India</div><ul class="exp-pts"><li>Managed a team of 12&ndash;15 graders ensuring precision, productivity, and service excellence in high-volume lab environments.</li><li>Played a critical role in establishing and scaling grading labs across India from the ground up.</li><li>Enhanced grading accuracy through structured training protocols and targeted process improvements.</li></ul></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-date"><div class="exp-yr">Start</div><div class="exp-pd">Foundation &middot; 2005</div></div>
+        <div><div class="exp-role">Loose Diamond Grader</div><div class="exp-org">International Gemological Institute &nbsp;&middot;&nbsp; India</div><ul class="exp-pts"><li>Performed precision grading of loose diamonds with strict adherence to global IGI standards &mdash; the foundation of a 19-year career.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto">
+    <div style="margin-bottom:2.8rem"><div class="sec-label">Impact</div><h2 class="sec-title">High-Impact <em>Achievements</em></h2></div>
+    <div class="ach-nums">
+      <div class="ach-n"><div><span class="ach-big">19</span><span class="ach-sm">+</span></div><div class="ach-lbl">Years of Continuous Growth at IGI</div></div>
+      <div class="ach-n"><div><span class="ach-big">2</span></div><div class="ach-lbl">Geographies &mdash; India &amp; Middle East</div></div>
+      <div class="ach-n"><div><span class="ach-big">15</span><span class="ach-sm">+</span></div><div class="ach-lbl">Graders Led in Lab Operations</div></div>
+      <div class="ach-n"><div><span class="ach-big">4</span></div><div class="ach-lbl">Progressive Roles at One Institution</div></div>
+    </div>
+    <div class="ach-list">
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Expanded IGI&apos;s education and certification footprint across new regions, accelerating national and international growth trajectory.</p></div>
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Improved operational efficiency through global-standard SOP rollout, reducing TAT and elevating lab service quality across all regions.</p></div>
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Strengthened institutional partnerships with government bodies and major retail chains contributing to long-term revenue sustainability.</p></div>
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Designed learning frameworks that elevated team skill maturity, increasing consistency across sales and grading functions.</p></div>
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Played a founding role in establishing IGI grading labs across India &mdash; infrastructure that became the backbone of national operations.</p></div>
+      <div class="ach-item"><div class="ach-dia"></div><p class="ach-txt">Led B2B/B2C market expansion strategies enabling IGI to grow into new business segments and institutional verticals across India.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="sec-inner">
+    <div style="margin-bottom:2.8rem"><div class="sec-label">Academic Foundation</div><h2 class="sec-title">Education &amp; <em>Qualifications</em></h2></div>
+    <div class="edu-grid">
+      <div class="edu-card top"><div class="edu-tag">Most Recent</div><div class="edu-yr">2025</div><div class="edu-deg">Senior Management Program in Leadership &amp; Management</div><div class="edu-inst">Indian Institute of Management (IIM) Calcutta</div></div>
+      <div class="edu-card"><div class="edu-tag">International</div><div class="edu-yr">2017</div><div class="edu-deg">Diploma in Diamond Grading</div><div class="edu-inst">Gem-A, London &mdash; Gemmological Association of Great Britain</div></div>
+      <div class="edu-card"><div class="edu-tag">Core Credential</div><div class="edu-yr">2005</div><div class="edu-deg">Graduate Gemologist</div><div class="edu-inst">International Gemological Institute (IGI)</div></div>
+      <div class="edu-card"><div class="edu-tag">Foundation</div><div class="edu-yr">2002</div><div class="edu-deg">Bachelor of Commerce</div><div class="edu-inst">Mumbai University</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="languages">
+  <div class="sec-inner">
+    <div style="margin-bottom:2rem;text-align:center"><div class="sec-label" style="justify-content:center">Languages</div><h2 class="sec-title" style="text-align:center">Fluent in <em>4 Languages</em></h2></div>
+    <div class="lang-row">
+      <div class="lc"><div class="lc-name">English</div><div class="lc-lv">Fluent</div><div class="ldots"><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div></div></div>
+      <div class="lc"><div class="lc-name">Hindi</div><div class="lc-lv">Fluent</div><div class="ldots"><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div></div></div>
+      <div class="lc"><div class="lc-name">Marathi</div><div class="lc-lv">Fluent</div><div class="ldots"><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div></div></div>
+      <div class="lc"><div class="lc-name">Gujarati</div><div class="lc-lv">Fluent</div><div class="ldots"><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div><div class="ld"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div>
+    <p class="sec-label" style="justify-content:center">Get in Touch</p>
+    <h2 class="ct-title">Open to <em>Conversations</em></h2>
+    <p class="ct-sub">For leadership opportunities, institutional partnerships, or gemological consulting.</p>
+    <div class="ct-items">
+      <div class="ct-d"><span class="ct-lbl">Email</span><span class="ct-val"><a href="mailto:contact@amitsidhpura.com">contact@amitsidhpura.com</a></span></div>
+      <div class="ct-d"><span class="ct-lbl">Location</span><span class="ct-val">Mumbai, Maharashtra, India</span></div>
+    </div>
+    <a href="mailto:contact@amitsidhpura.com" class="btn-gold">Send a Message</a>
+  </div>
+</section>
+
+<footer><p>Amit N. Sidhpura &nbsp;<span>&#9670;</span>&nbsp; Senior Manager &mdash; Sales, Operations &amp; Training Development &nbsp;<span>&#9670;</span>&nbsp; International Gemological Institute</p></footer>
+
+<script>
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').style.borderBottomColor = window.scrollY>60?'rgba(181,148,74,0.25)':'rgba(181,148,74,0.15)';
+});
+</script>
+</body>
+</html>
