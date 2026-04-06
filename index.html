@@ -14,11 +14,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:#6a9298;text-decoration:none;transition:color 0.3s}
 .nav-links a:hover{color:#d4aa6a}
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:0 4rem}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:space-between;overflow:hidden;padding:0 4rem}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 45%,rgba(14,102,116,0.2) 0%,transparent 65%),linear-gradient(135deg,#071c20 0%,#091e24 60%,#0d3040 100%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(181,148,74,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(181,148,74,0.04) 1px,transparent 1px);background-size:60px 60px}
 .hero-gem{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:550px;height:550px;opacity:0.06}
-.hero-content{position:relative;z-index:2;max-width:680px;padding-top:80px}
+.hero-content{position:relative;z-index:2;max-width:620px;padding-top:80px;flex:1}
 .hero-eyebrow{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:#b5944a;text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:1rem}
 .hero-eyebrow::before{content:'';width:36px;height:1px;background:#b5944a;flex-shrink:0}
 .hero-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:1.0;color:#fff}
@@ -34,7 +34,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .btn-gold:hover{background:#d4aa6a;transform:translateY(-2px)}
 .btn-ghost{padding:0.8rem 2rem;background:transparent;color:#fff;font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.2);display:inline-block;transition:all 0.3s}
 .btn-ghost:hover{border-color:#b5944a;color:#d4aa6a}
-.hero-stats{position:absolute;right:4rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:0.5rem;z-index:2}
+.hero-stats{position:relative;display:flex;flex-direction:column;gap:0.5rem;z-index:2;padding-left:4rem;flex-shrink:0}
 .stat-card{background:rgba(13,46,53,0.75);border:1px solid rgba(181,148,74,0.15);border-left:3px solid #b5944a;padding:1rem 1.4rem;min-width:190px;backdrop-filter:blur(10px)}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:#d4aa6a;line-height:1}
 .stat-label{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#6a9298;margin-top:0.25rem}
